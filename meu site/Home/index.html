@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Animes Clips</title>
+</head>
+
+<body>
+
+    <div class="particulas">
+
+    </div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            
+            <li>
+                <a href="#clipes" class="menu-link">Clipes</a>
+            </li>
+            
+            <li>
+                <a href="#suporte" class="menu-link">Suporte</a>
+            </li>
+            
+            <ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/anya.jpg" alt="Icon do Site" class="logo">
+        <h1>Animes Clips</h1>
+        <p class="cabecalho-sub-titulo">Clipes de Animes para Editores</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre o Site</h2>
+        <div class="sobre-caixa">
+            <p class="paragrafo">
+                O Animes CLips é um site dedicado a fornecer clipes de animes para editores e fãs de anime. Nosso
+                objetivo é oferecer uma ampla variedade de clipes de alta qualidade para que os editores possam criar
+                vídeos incríveis e os fãs possam desfrutar de seus momentos favoritos dos animes.
+            </p>
+        </div>
+
+        <section id="clipes" class="clipes">
+            <h2 class="clipes-titulo">Clipes</h2>
+            <div class="clipes-caixa">
+                <div class="clipes-card">
+                    <img src="./img/twixtor1.jpg" alt="Twixtor 1" class="twixtor-imagem">
+                    <div class="caixa-textos-clips">
+                        <h3 class="info-clipes">Yuji Itadori Twixtor</h3>
+                        <p class="paragrafo-clipes">Twixtor mto daora do Yuji Itadori</p>
+                    </div>
+
+                </div>
+
+                <div class="clipes-caixa">
+                    <div class="clipes-card">
+                        <img src="./img/twixtor2.jpg" alt="Twixtor 2" class="twixtor-imagem">
+                        <div class="caixa-textos-clips">
+                            <h3 class="info-clipes">Mitsuha Twixtor</h3>
+                            <p class="paragrafo-clipe">Twixtor mto daora da Mitsuha</p>
+                        </div>
+                    </div>
+
+                    <div class="clipes-caixa">
+                        <div class="clipes-card">
+                            <img src="./img/twixtor3.jpg" alt="Twixtor 1" class="twixtor-imagem">
+                            <div class="caixa-textos-clips">
+                                <h3 class="info-clipes">Aizen Twixtor</h3>
+                                <p class="paragrafo-clipe">Twixtor mto daora do Sosuke Aizen</p>
+                            </div>
+        </section>
+
+        <section id="suporte" class="suporte">
+            <h2 class="suporte-titulo">Entre em Contato com o Suporte</h2>
+
+            <form class="formulario-suporte" id="formulario-suporte" onsubmit="enviarEmail(event)">
+                <div class="grupo-form">
+                    <input placeholder="Nome" class="campo-form" rows="6" id="nome">
+                    <div>
+
+                    </div class="grupo-form">
+                    <textarea class="campo-form" placeholder="digite sua mensagem" id="mensagem"></textarea>
+                </div>
+
+                <button type="submit" class="botao-form">Enviar Mensagem</button>
+            </form>
+
+        </section>
+
+        <script>
+            function enviarEmail(event) {
+                event.preventDefault();
+
+            emailjs.send ("service_b54lt77", "template_gnpkajt", {
+                from_name: document.getElementById("nome").value,
+                message: document.getElementById("mensagem").value
+            }).then(
+                function (response) {
+                    console.log("Email enviado com sucesso!", response.status, response.text);
+                    alert("Mensagem enviada com sucesso!");
+                },
+                function (error) {
+                    console.error("Erro ao enviar email:", error);
+                    alert("Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.");
+                }
+            );
+                }
+        </script>
+
+</body>
+
+</html>
