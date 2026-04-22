@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>AnimeClips - Clipes de Animes para Editores</title>
+</head>
+
+<body class="dark">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <img src="./img/anya.jpg" alt="AnimeClips Logo" class="logo">
+                <h1 class="site-title">AnimeClips</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#featured" class="nav-link">Destaques</a></li>
+                    <li><a href="#clips" class="nav-link">Clipes</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="user-info">
+                    <span id="user-greeting">Bem-vindo!</span>
+                    <button class="logout-btn" onclick="logout()">Sair</button>
+                </div>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Clipes de Animes Premium</h2>
+            <p class="hero-subtitle">Baixe clipes de alta qualidade para seus projetos de edição</p>
+            <div class="hero-buttons">
+                <a href="#featured" class="btn btn-primary">Ver Destaques</a>
+                <a href="#clips" class="btn btn-secondary">Explorar Clipes</a>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <img src="./img/nazuna.png" alt="Nazuna Background">
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured" class="featured">
+        <div class="container">
+            <h2 class="section-title">Destaques da Semana</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <img src="./img/twixtor1.jpg" alt="Yuji Itadori" class="featured-img">
+                    <div class="featured-overlay">
+                        <h3>Yuji Itadori Twixtor</h3>
+                        <p>Clipes épicos de Jujutsu Kaisen</p>
+                        <button onclick="openVideo('https://youtube.com/embed/ZEC05-PraOA?si=tJY2yQCqHSOfMB3S')" class="btn btn-small btn-primary">Assistir</button>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="./img/twixtor2.jpg" alt="Mitsuha" class="featured-img">
+                    <div class="featured-overlay">
+                        <h3>Mitsuha Miyamizu</h3>
+                        <p>Momentos românticos de Your Name</p>
+                        <button onclick="openVideo('https://youtube.com/embed/OnAUEqiW2js?si=RKab0KUXAObFxlX2')" class="btn btn-small btn-primary">Assistir</button>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="./img/twixtor3.jpg" alt="Aizen" class="featured-img">
+                    <div class="featured-overlay">
+                        <h3>Sosuke Aizen</h3>
+                        <p>Cenas icônicas de Bleach</p>
+                        <button onclick="openVideo('https://youtube.com/embed/YkaBy0fof7A?si=wl8gUDO3i1Qr96hU')" class="btn btn-small btn-primary">Assistir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clips Section -->
+    <section id="clips" class="clips">
+        <div class="container">
+            <h2 class="section-title">Biblioteca de Clipes</h2>
+            <div class="clips-grid">
+                <div class="clip-card">
+                    <img src="./img/twixtor1.jpg" alt="Clip 1" class="clip-img">
+                    <div class="clip-info">
+                        <h3>Yuji Itadori Twixtor</h3>
+                        <p>Twixtor muito daora do Yuji Itadori</p>
+                        <div class="clip-actions">
+                            <button class="btn btn-outline">Assistir</button>
+                            <button class="btn btn-primary">Download</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="clip-card">
+                    <img src="./img/twixtor2.jpg" alt="Clip 2" class="clip-img">
+                    <div class="clip-info">
+                        <h3>Mitsuha Twixtor</h3>
+                        <p>Twixtor muito daora da Mitsuha</p>
+                        <div class="clip-actions">
+                            <button class="btn btn-outline">Assistir</button>
+                            <button class="btn btn-primary">Download</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="clip-card">
+                    <img src="./img/twixtor3.jpg" alt="Clip 3" class="clip-img">
+                    <div class="clip-info">
+                        <h3>Aizen Twixtor</h3>
+                        <p>Twixtor muito daora do Sosuke Aizen</p>
+                        <div class="clip-actions">
+                            <button class="btn btn-outline">Assistir</button>
+                            <button class="btn btn-primary">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre o AnimeClips</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>O AnimeClips é a plataforma definitiva para editores e fãs de anime que buscam clipes de alta qualidade. Nossa missão é fornecer conteúdo premium para criar vídeos incríveis e reviver momentos épicos dos seus animes favoritos.</p>
+                    <p>Com uma biblioteca crescente de clipes twixtor, slow motion e efeitos especiais, ajudamos criadores de conteúdo a elevar seus projetos para o próximo nível.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Clipes Disponíveis</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10k+</h3>
+                        <p>Downloads</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Animes Cobertos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Precisa de Ajuda?</h3>
+                    <p>Entre em contato conosco para sugestões, relatar bugs ou solicitar novos clipes.</p>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> suporte@animeclips.com</p>
+                        <p><i class="fas fa-clock"></i> Atendimento: 24/7</p>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="enviarEmail(event)">
+                    <div class="form-group">
+                        <input type="text" id="nome" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AnimeClips</h3>
+                    <p>Clipes de animes para editores e fãs.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#featured">Destaques</a></li>
+                        <li><a href="#clips">Clipes</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AnimeClips. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("your_public_key"); // Substitua pela sua chave
+
+        function enviarEmail(event) {
+            event.preventDefault();
+            emailjs.send("service_b54lt77", "template_gnpkajt", {
+                from_name: document.getElementById("nome").value,
+                message: document.getElementById("mensagem").value
+            }).then(
+                function (response) {
+                    alert("Mensagem enviada com sucesso!");
+                },
+                function (error) {
+                    alert("Erro ao enviar mensagem. Tente novamente.");
+                }
+            );
+        }
+
+        function logout() {
+            window.location.href = '../index.html';
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

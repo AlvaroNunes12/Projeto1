@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>AnimeClips Login</title>
+</head>
+
+<body class="dark">
+
+    <main class="container">
+
+        <!-- Formulário de Login -->
+        <form id="loginForm" onsubmit="login(event)">
+            <h1>Entre na Plataforma</h1>
+
+            <div class="input-box">
+                <input id="email" placeholder="Usuário" type="email" required>
+                <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input id="senha" placeholder="Senha" type="password" required>
+                <i class="bx bxs-lock-alt"></i>
+                <i class="bx bx-show toggle-password" data-target="senha"></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox">
+                    Lembrar senha
+                </label>
+                <a href="#" onclick="showForgotPassword()">Esqueci a senha</a>
+            </div>
+
+            <button type="submit" class="login">Login</button>
+
+            <p id="msg"></p>
+
+            <div class="register-link">
+                <p>Não tem uma conta? <a href="#" onclick="showRegister()">Cadastre-se</a></p>
+            </div>
+
+        </form>
+
+        <!-- Formulário de Registro -->
+        <form id="registerForm" onsubmit="register(event)" style="display: none;">
+            <h1>Cadastre-se</h1>
+
+            <div class="input-box">
+                <input id="regEmail" placeholder="Email" type="email" required>
+                <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input id="regSenha" placeholder="Senha" type="password" required>
+                <i class="bx bxs-lock-alt"></i>
+                <i class="bx bx-show toggle-password" data-target="regSenha"></i>
+            </div>
+
+            <button type="submit" class="login">Registrar</button>
+
+            <p id="regMsg"></p>
+
+            <div class="register-link">
+                <p>Já tem uma conta? <a href="#" onclick="showLogin()">Faça login</a></p>
+            </div>
+
+        </form>
+
+        <!-- Formulário de Esqueci a Senha -->
+        <form id="forgotForm" onsubmit="forgotPassword(event)" style="display: none;">
+            <h1>Esqueci a Senha</h1>
+
+            <div class="input-box">
+                <input id="forgotEmail" placeholder="Email" type="email" required>
+                <i class="bx bxs-user"></i>
+            </div>
+
+            <button type="submit" class="login">Enviar Código</button>
+
+            <p id="forgotMsg"></p>
+
+            <div class="register-link">
+                <p><a href="#" onclick="showResetPassword()">Já tenho o código</a> | <a href="#"
+                        onclick="showLogin()">Voltar ao Login</a></p>
+            </div>
+
+        </form>
+
+        <!-- Formulário de Reset de Senha -->
+        <form id="resetForm" onsubmit="resetPassword(event)" style="display: none;">
+            <h1>Resetar Senha</h1>
+
+            <div class="input-box">
+                <input id="resetToken" placeholder="Código de Reset" type="text" required>
+                <i class="bx bxs-key"></i>
+            </div>
+
+            <div class="input-box">
+                <input id="novaSenha" placeholder="Nova Senha" type="password" required>
+                <i class="bx bxs-lock-alt"></i>
+                <i class="bx bx-show toggle-password" data-target="novaSenha"></i>
+            </div>
+
+            <button type="submit" class="login">Resetar Senha</button>
+
+            <p id="resetMsg"></p>
+
+            <div class="register-link">
+                <p><a href="#" onclick="showLogin()">Voltar ao Login</a></p>
+            </div>
+
+        </form>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
